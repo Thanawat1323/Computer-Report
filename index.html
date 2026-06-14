@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing รายงาน</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div id="menuScreen" class="overlay menu-screen">
+    <div class="menu-shell">
+      <div class="menu-header">
+        <p class="menu-kicker">รายงาน</p>
+        <h2>เกมฝึกพิมพ์</h2>
+        <p class="menu-desc">ครู วิชญาพร จันทร์กัน</p>
+      </div>
+
+      <div class="language-box">
+        <label for="language">ภาษา</label>
+        <select id="language">
+          <option value="thai">ภาษาไทย</option>
+          <option value="english">English</option>
+        </select>
+      </div>
+
+      <div class="mode-grid">
+        <button class="mode-card easy" data-mode="easy">
+          <span class="mode-accent"></span>
+          <strong>Easy</strong>
+          <small>ง่าย</small>
+        </button>
+
+        <button class="mode-card normal" data-mode="normal">
+          <span class="mode-accent"></span>
+          <strong>Normal</strong>
+          <small>ปกติ</small>
+        </button>
+
+        <button class="mode-card hard" data-mode="hard">
+          <span class="mode-accent"></span>
+          <strong>Hard</strong>
+          <small>ยาก</small>
+        </button>
+
+        <button class="mode-card survival" data-mode="survival">
+          <span class="mode-accent"></span>
+          <strong>Survival</strong>
+          <small>อยู่รอด</small>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>โครงงานคอมพิวเตอร์</h1>
+        <p>ฝึกความเร็ว ความแม่นยำ และจังหวะการพิมพ์</p>
+      </div>
+
+      <div class="topbar-right">
+        <div id="modeLabel" class="mode-label">ยังไม่ได้เลือกโหมด</div>
+      </div>
+    </header>
+
+    <section class="hud">
+      <div class="stat">
+        <span id="wpm">0</span>
+        <small>WPM</small>
+      </div>
+
+      <div class="stat">
+        <span id="time">1:00</span>
+        <small>เวลา</small>
+      </div>
+
+      <div class="stat">
+        <span id="accuracy">100%</span>
+        <small>% ความถูกต้อง</small>
+      </div>
+    </section>
+
+    <section class="text-panel">
+      <div id="status" class="status">เลือกภาษาและโหมดก่อนเริ่มเล่น</div>
+      <div id="textDisplay" class="text-display"></div>
+
+      <div class="time-track">
+        <div id="timeBarFill" class="time-fill"></div>
+      </div>
+    </section>
+
+    <section class="bottom-note">
+      Thanawat wiyawat , Pichitchai Srikonsay
+    </section>
+  </main>
+
+  <div id="countdownScreen" class="overlay countdown-screen hidden">
+    <div id="countdownText" class="countdown-text">3</div>
+  </div>
+
+  <div id="resultScreen" class="overlay result-screen hidden">
+    <div class="result-shell">
+      <p class="result-kicker">จบเกมแล้ว</p>
+      <h2>สถิติการเล่น</h2>
+
+      <div class="result-grid">
+        <div class="result-card">
+          <span id="resultWpm">0</span>
+          <small>WPM</small>
+        </div>
+
+        <div class="result-card">
+          <span id="resultAccuracy">100%</span>
+          <small>ความถูก</small>
+        </div>
+
+        <div class="result-card">
+          <span id="resultTime">0:00</span>
+          <small>เวลาเล่น</small>
+        </div>
+
+        <div class="result-card">
+          <span id="resultCorrect">0</span>
+          <small>พิมพ์ถูก</small>
+        </div>
+
+        <div class="result-card">
+          <span id="resultWrong">0</span>
+          <small>พิมพ์ผิด</small>
+        </div>
+
+        <div class="result-card">
+          <span id="resultMode">-</span>
+          <small>โหมด</small>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="playAgainBtn">เล่นอีกครั้ง</button>
+        <button id="backToMenuBtn" class="ghost-btn">กลับหน้าเลือกโหมด</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./text/Easy.js"></script>
+  <script src="./text/Normal.js"></script>
+  <script src="./text/Hard.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
