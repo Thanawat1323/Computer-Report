@@ -1,2 +1,0 @@
-Thanawat Wiyawat ,
-Pichitchai Srikonsay
